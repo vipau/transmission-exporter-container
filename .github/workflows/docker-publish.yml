@@ -38,6 +38,7 @@ jobs:
         with:
           cosign-release: 'v2.2.4'
 
+      # Set up QEMU for cross-platform builds
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
 
