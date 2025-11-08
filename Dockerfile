@@ -16,6 +16,5 @@ COPY . .
 RUN go build -o /app/ ./...
 
 FROM scratch
-COPY --from=build /app/transmission-exp /transmission-exp
-RUN chmod +x /transmission-exp
-CMD ["/transmission-exp"]
+COPY --from=build /app/transmission-exporter /transmission-exporter
+CMD ["/transmission-exporter"]
