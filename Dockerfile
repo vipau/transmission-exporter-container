@@ -13,7 +13,7 @@ RUN go mod download
 COPY . .
 
 # Build the Go binary for the target OS/ARCH
-RUN go build -o transmission-exp ./...
+RUN go build ./...
 
 FROM scratch
 COPY --from=build /app/transmission-exp /transmission-exp
